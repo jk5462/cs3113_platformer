@@ -43,6 +43,7 @@ void Level2::Initialize() {
 	state.player.width = 0.7f;
 	state.player.acceleration = glm::vec3(0, -9.81f, 0);
 	state.player.textureID = Util::LoadTexture("me.png");
+	state.player.bounce = Mix_LoadWAV("bounce.wav");
 
 	for (int i = 0; i < ENEMY_COUNT; i++) {
 		state.enemies[i].entityType = ENEMY;

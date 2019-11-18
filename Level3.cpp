@@ -53,6 +53,7 @@ void Level3::Initialize() {
 	state.player.width = 0.7f;
 	state.player.acceleration = glm::vec3(0, -9.81f, 0);
 	state.player.textureID = Util::LoadTexture("me.png");
+	state.player.bounce = Mix_LoadWAV("bounce.wav");
 
 	for (int i = 0; i < ENEMY_COUNT; i++) {
 		state.enemies[i].entityType = ENEMY;
@@ -79,7 +80,6 @@ void Level3::Update(float deltaTime) {
 	}
 	if (state.player.position.x > 34) {
 		state.nextLevel = 5;
-		Mix_PlayChannel(-1, clear, 0);
 	}
 
 }

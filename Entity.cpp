@@ -148,6 +148,9 @@ void Entity::Jump()
     if (collidedBottom)
     {
         velocity.y = 5.0f;
+		if (entityType == PLAYER) {
+			Mix_PlayChannel(-1, bounce, 0);
+		}
     }
 }
 

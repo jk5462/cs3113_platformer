@@ -26,7 +26,7 @@ public:
 
     glm::vec3 position;
     glm::vec3 velocity;
-    glm::vec3 acceleration;
+    glm::vec3 acceleration;	Mix_Chunk* bounce;
     float width;
     float height;
     
